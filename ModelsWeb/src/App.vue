@@ -36,7 +36,7 @@
             AllJobs,
             CreateJob,
             CreateManager,
-            CreateModel,
+            CreateModel,   
             ViewJob
         }
     };
