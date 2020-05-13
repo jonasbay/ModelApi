@@ -1,3 +1,7 @@
+<head>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
 <template>
     <div id="app">
         <center>
@@ -23,6 +27,8 @@
     </div>
 </template>
 
+
+
 <script>
     import Home from './components/Home.vue';
     import Login from './components/Login.vue';
@@ -44,6 +50,7 @@
             ViewJob
         }
     };
+
 </script>
 
 <style>

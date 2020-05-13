@@ -1,54 +1,55 @@
-<!--<template>
-    <div id="Login">
-        <h1>Login</h1>
-
-        <label>Username</label><br />
-        <input v-model="username" /><br />
-        <label>Password</label><br />
-        <input v-model="password" /><br />
-        <button @click="$fetch">Login</button>
-        <span>
-            {{ username }}
-            {{ password }}
-        </span>
-    </div>
-</template>
-<script src="https://unpkg.com/vue"></script>
-<script>
-    export default {
-        name: 'Login',
-        username: '',
-        password: ''
-    };
-    new Vue({
-        el: '#Login',
-        data: { username, password }
-    });
-</script>
-
-<style scoped>
-</style>-->
-
-
 <template>
-    <div id="Login">
-        <!--<h1>Login</h1>
-        <input v-model="username" /><br />-->
-        <p>alex elsker, {{ Message }}</p>
+    <div>
+        <p>Noget lækker tekst her</p>
+        <form>
+            <div class="form-group">
+                <label for="email">Email: </label>
+                <input type="email" v-model="form.email" placeholder="Enter your email here" />
+            </div>
+            <div class="form-group">
+                <label for="password">Password: </label>
+                <input type="text" v-model="form.password" placeholder="Enter your password here" />
+            </div>
+            <div class="form-group">
+                <button type="button" class="button" v-on:click="loginFunction">Login</button>
+            </div>
+        </form>
+        <span class="text-danger">{{message}}</span>
     </div>
 </template>
-
-<script src="https://unpkg.com/vue"></script>
 
 <script>
     export default {
         name: 'Login',
-        data: { Message: 'Kage' }
+        data: function () {
+            return {
+                form: {
+                    email: '',
+                    password: ''
+                },
+                message: ''
+            }
+        },
+        methods: {
+            loginFunction() {
+                let Login = {};
+                Login.email = this.form.email;
+                Login.password = this.form.password;
+                fetch('https://localhost:44368/api/account/Login', {
+                    method: 'POST',
+                    body: JSON.stringify(Login),
+                    headers: new Headers({
+                        'Content-Type': 'application/json'
+                    })
+                }).then(res => res.json().then((token) => {
+                    localStorage.setItem("token", token.jwt);
+                }
+                ).catch(error => console.error('Error:', error)));
+            }
+        }
     }
-    //new Vue({
-    //    el: '#app',
-    //    data: {Message: 'Pik'}
-    //});
+
+
 </script>
 
 <style scoped>
