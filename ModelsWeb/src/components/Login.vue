@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>Noget lækker tekst her</p>
+        <p>Login</p>
         <form>
             <div class="form-group">
                 <label for="email">Email: </label>

@@ -19,6 +19,10 @@
                 <router-link to="/CreateModel">Opret ny model</router-link>
                 <br />
                 <router-link to="/ViewJob">Se specifikt job</router-link>
+                <br />
+                <router-link to="/AddModelToJob">Add model to job</router-link>
+                <br />
+                <router-link to="/DeleteModelFromJob">Delete model from job</router-link>
             </nav>
             <div id="page">
                 <router-view></router-view>
@@ -37,6 +41,8 @@
     import CreateManager from './components/CreateManager.vue';
     import CreateModel from './components/CreateModel.vue';
     import ViewJob from './components/ViewJob.vue';
+    import AddModelToJob from './components/AddModelToJob.vue';
+    import DeleteModelFromJob from './components/DeleteModelFromJob.vue'; 
 
     export default {
         name: 'app',
@@ -47,7 +53,9 @@
             CreateJob,
             CreateManager,
             CreateModel,   
-            ViewJob
+            ViewJob,
+            AddModelToJob,
+            DeleteModelFromJob
         }
     };
 

@@ -32,6 +32,9 @@
     <Content Include="public\favicon.ico" />
     <Content Include="public\index.html" />
     <Content Include="src\App.vue" />
+    <Content Include="src\components\AddModelToJob.vue">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\components\AllJobs.vue">
       <SubType>Code</SubType>
     </Content>
@@ -42,6 +45,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\components\CreateModel.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\DeleteModelFromJob.vue">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\components\Home.vue" />

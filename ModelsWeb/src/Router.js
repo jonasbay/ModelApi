@@ -7,6 +7,8 @@ import CreateJob from './components/CreateJob.vue';
 import CreateManager from './components/CreateManager.vue';
 import CreateModel from './components/CreateModel.vue';
 import ViewJob from './components/ViewJob.vue';
+import AddModelToJob from './components/AddModelToJob.vue';
+import DeleteModelFromJob from './components/DeleteModelFromJob.vue';
 
 Vue.use(Router);
 
@@ -48,6 +50,16 @@ export default new Router({
             path: "/createManager",
             name: "CreateManager",
             component: CreateManager
+        },
+        {
+            path: "/addModelToJob",
+            name: "AddModelToJob",
+            component: AddModelToJob
+        },
+        {
+            path: "/deleteModelFromJob",
+            name: "DeleteModelFromJob",
+            component: DeleteModelFromJob
         }
     ]
 });
