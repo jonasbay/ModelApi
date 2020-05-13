@@ -1,13 +1,13 @@
 <template>
     <h1>
-        Opret en ny model
+        CreateModel
     </h1>
-    <p>
-        Her kan en manager oprette en ny model
-    </p>
 </template>
 
 <script>
+    export default {
+        name: 'CreateModel'
+    }
 </script>
 
 <style scoped>

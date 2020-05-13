@@ -1,16 +1,13 @@
 <template>
     <h1>
-        Se alle model jobs
+        AllJobs
     </h1>
-    <p>
-        Her kan en manager se alle modellernes jobs
-    </p>
-    <p>
-        Her kan en model se sine egne jobs
-    </p>
 </template>
 
 <script>
+    export default {
+        name: 'AllJobs'
+    }
 </script>
 
 <style scoped>

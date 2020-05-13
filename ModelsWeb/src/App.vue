@@ -1,21 +1,25 @@
 <template>
     <div id="app">
-        <nav>
-            <router-link to="/">Home</router-link>
-            <br/>
-            <router-link to="/Login">Login</router-link>
-            <br />
-            <router-link to="/AllJobs">Alle jobs</router-link>
-            <br />
-            <router-link to="/CreateJob">Opret nyt job</router-link>
-            <br />
-            <router-link to="/CreateManager">Opret ny manager</router-link>
-            <br />
-            <router-link to="/CreateModel">Opret ny model</router-link>
-            <br />
-            <router-link to="/ViewJob">Se specifikt job</router-link>
-        </nav>
-        <router-view></router-view>
+        <center>
+            <nav>
+                <router-link to="/">Home</router-link>
+                <br />
+                <router-link to="/Login">Login</router-link>
+                <br />
+                <router-link to="/AllJobs">Alle jobs</router-link>
+                <br />
+                <router-link to="/CreateJob">Opret nyt job</router-link>
+                <br />
+                <router-link to="/CreateManager">Opret ny manager</router-link>
+                <br />
+                <router-link to="/CreateModel">Opret ny model</router-link>
+                <br />
+                <router-link to="/ViewJob">Se specifikt job</router-link>
+            </nav>
+            <div id="page">
+                <router-view></router-view>
+            </div>
+        </center>
     </div>
 </template>
 

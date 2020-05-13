@@ -1,15 +1,13 @@
 <template>
     <h1>
-        Se ét job
+        ViewJob
     </h1>
-    <p>
-        Her kan man se et specifikt job. 
-        Manager: kan rette, redigere, tilføje modeller til job
-        Model: Kan tilføje udgift
-    </p>
 </template>
 
 <script>
+    export default {
+        name: 'ViewJob'
+    }
 </script>
 
 <style scoped>

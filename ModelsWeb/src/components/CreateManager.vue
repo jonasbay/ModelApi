@@ -1,13 +1,13 @@
 <template>
     <h1>
-        Opret en ny Manager
+        CreateManager
     </h1>
-    <p>
-        Her kan en manager oprette en ny manager
-    </p>
 </template>
 
 <script>
+    export default {
+        name: 'CreateManager'
+    }
 </script>
 
 <style scoped>

@@ -25,6 +25,11 @@ export default new Router({
             component: Login
         },
         {
+            path: "/allJobs",
+            name: "AllJobs",
+            component: AllJobs
+        },
+        {
             path: "/viewJob",
             name: "ViewJob",
             component: ViewJob
@@ -43,11 +48,6 @@ export default new Router({
             path: "/createManager",
             name: "CreateManager",
             component: CreateManager
-        },
-        {
-            path: "/allJobs",
-            name: "AllJobs",
-            component: AllJobs
         }
     ]
 });
