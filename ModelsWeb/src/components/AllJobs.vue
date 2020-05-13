@@ -1,14 +1,16 @@
 <template>
     <div>
         <h1>All jobs</h1>
-        <div class="form-group">
-            <button type="button" class="button" v-on:click="created">List all jobs</button>
-        </div>
-        <ul v-for="job in functionJobs">
-            <li>
-                {{ job.Customer }}
-            </li>
-        </ul>
+        <form>
+            <div class="form-group">
+                <button type="button" class="button" v-on:click="created">List all jobs</button>
+            </div>
+            <ul>
+                <li v-for="job in form.functionJobs">
+                    {{ job.Customer }}
+                </li>
+            </ul>
+        </form>
     </div>
 </template>
 
@@ -17,12 +19,15 @@
         name: 'listAllJobs',
         data: function () {
             return {
-                functionJobs: []
+                form: {
+                    functionJobs: []
+                }
             }
         },
         methods: {
             created() {
-                var jobs = [];
+                let jobs = {};
+                jobs.jobs = this.form.functionJobs;
                 fetch('https://localhost:44368/api/jobs', {
                     method: 'GET',
                     credentials: 'include',
@@ -32,9 +37,11 @@
                         'Authorization': 'Bearer ' + localStorage.getItem("token"),
                         'Content-Type': 'application/json'
                     }
-                }).then((responseJson) => responseJson.json()
-
-                ).then(function (data){})
+                }).then((responseJson) => {
+                    return responseJson.json()
+                }).then((data) => {
+                    this.form.functionJobs = data
+                })
                     .catch(error => alert('Fejl: ' + error));
             }
         }
