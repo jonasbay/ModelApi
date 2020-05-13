@@ -21,6 +21,6 @@ namespace ModelsApi
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });//
+                });
     }
 }

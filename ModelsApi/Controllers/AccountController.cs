@@ -36,6 +36,7 @@ namespace ModelsApi.Controllers
             _appSettings = appSettings.Value;
         }
 
+
         /// <summary>
         /// You must login before you can use any other api call.
         /// </summary>
@@ -73,6 +74,8 @@ namespace ModelsApi.Controllers
             ModelState.AddModelError(string.Empty, "Invalid login");
             return BadRequest(ModelState);
         }
+
+
 
         /// <summary>
         /// Use to change the password.
