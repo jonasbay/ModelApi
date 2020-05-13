@@ -10,19 +10,19 @@
                 <br />
                 <router-link to="/Login">Login</router-link>
                 <br />
-                <router-link to="/AllJobs">Alle jobs</router-link>
+                <router-link to="/AllJobs">See all jobs</router-link>
                 <br />
-                <router-link to="/CreateJob">Opret nyt job</router-link>
+                <router-link to="/CreateJob">Create new jobs</router-link>
                 <br />
-                <router-link to="/CreateManager">Opret ny manager</router-link>
+                <router-link to="/CreateManager">Create new manager</router-link>
                 <br />
-                <router-link to="/CreateModel">Opret ny model</router-link>
-                <br />
-                <router-link to="/ViewJob">Se specifikt job</router-link>
+                <router-link to="/CreateModel">Create new model</router-link>
                 <br />
                 <router-link to="/AddModelToJob">Add model to job</router-link>
                 <br />
                 <router-link to="/DeleteModelFromJob">Delete model from job</router-link>
+                <br />
+                <router-link to="/AddExpenceToJob">Add expence to job</router-link>
             </nav>
             <div id="page">
                 <router-view></router-view>
@@ -40,10 +40,10 @@
     import CreateJob from './components/CreateJob.vue';
     import CreateManager from './components/CreateManager.vue';
     import CreateModel from './components/CreateModel.vue';
-    import ViewJob from './components/ViewJob.vue';
     import AddModelToJob from './components/AddModelToJob.vue';
     import DeleteModelFromJob from './components/DeleteModelFromJob.vue'; 
-
+    import AddExpenceToJob from './components/AddExpenceToJob.vue'; 
+    
     export default {
         name: 'app',
         components: {
@@ -53,9 +53,9 @@
             CreateJob,
             CreateManager,
             CreateModel,   
-            ViewJob,
             AddModelToJob,
-            DeleteModelFromJob
+            DeleteModelFromJob,
+            AddExpenceToJob
         }
     };
 

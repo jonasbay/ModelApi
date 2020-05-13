@@ -5,11 +5,15 @@
             <div class="form-group">
                 <button type="button" class="button" v-on:click="created">List all jobs</button>
             </div>
-            <ul>
-                <li v-for="job in form.functionJobs">
-                    {{ job.Customer }}
-                </li>
-            </ul>
+                <p v-for="job in form.functionJobs">
+                    ----------------------------------------------------------------<br />
+                    Customer: {{ job.customer }} <br />
+                    Location: {{job.location}} <br />
+                    StartDate: {{job.startDate}} <br />
+                    Durations: {{job.days}} days <br />
+                    Comments: {{job.comments}} <br />
+                    ----------------------------------------------------------------
+                </p>
         </form>
     </div>
 </template>
