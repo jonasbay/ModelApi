@@ -112,7 +112,7 @@ namespace ModelsApi
 
             app.UseRouting();
 
-            app.UseAuthentication();
+            app.UseAuthentication(); // Altid sæt denne først
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
