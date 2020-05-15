@@ -12,7 +12,7 @@
             </div>
             <div class="form-group">
                 <label for="days">Days: </label>
-                <input type="number" step="1" min="1" v-model="form.days" placeholder="Enter how many days" />
+                <input type="number" step="1" min="1" v-model.number="form.days" placeholder="Enter how many days" />
             </div>
             <div class="form-group">
                 <label for="location">Location: </label>

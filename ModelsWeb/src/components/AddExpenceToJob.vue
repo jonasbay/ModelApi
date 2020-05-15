@@ -4,11 +4,11 @@
         <form>
             <div class="form-group">
                 <label for="jobid">Job id: </label>
-                <input type="text" v-model="form.jobid" placeholder="Enter job id" />
+                <input type="number" v-model.number="form.jobid" placeholder="Enter job id" />
             </div>
             <div class="form-group">
                 <label for="modelid">Model id: </label>
-                <input type="text" v-model="form.modelid" placeholder="Enter model id" />
+                <input type="number" v-model.number="form.modelid" placeholder="Enter model id" />
             </div>
             <div class="form-group">
                 <label for="date">Date: </label>
@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label for="amount">Amount: $</label>
-                <input type="number" step="10" v-model="form.amount" placeholder="Enter the amount" /> 
+                <input type="number" step="10" v-model.number="form.amount" placeholder="Enter the amount" /> 
 
             </div>
             <div class="form-group">

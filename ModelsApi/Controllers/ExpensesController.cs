@@ -15,7 +15,7 @@ namespace ModelsApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]     // Er blevet indkommeneret
     public class ExpensesController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
